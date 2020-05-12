@@ -1,0 +1,10 @@
+{
+  "compilerOptions": { // 编译选项
+    "target": "es2016", // 配置编译目标代码的版本标准
+    "module": "commonjs", // 配置编译目标的模块化标准
+    "lib": ["es2016"], // 运行环境
+    "outDir": "./dist", // 编译结果
+    "strictNullChecks": true // 更加严格的检查，undefined null 不再属于任何类型的子集
+  },
+  "include": ["./src"] // 编译整个文件夹下的ts文件，files：编译某一个文件
+}
