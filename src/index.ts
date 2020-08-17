@@ -1,54 +1,54 @@
-type Color = '♥️' | '♦️' | '♣️' | '♠️'
-type Deck = NormalCard[]
+type Color = "♥️" | "♦️" | "♣️" | "♠️";
+type Deck = NormalCard[];
 type NormalCard = {
-  color: Color,
-  mark: Number | String
-}
+  color: Color;
+  mark: Number | String;
+};
 function createdDeck(): Deck {
-  const deck: Deck = []
+  const deck: Deck = [];
   for (let i = 1; i <= 13; i++) {
     deck.push({
-      color: '♠️',
-      mark: i === 1 ? 'A' : i
-    })
+      color: "♠️",
+      mark: i === 1 ? "A" : i,
+    });
     deck.push({
-      color: '♠️',
-      mark: i === 1 ? 'A' : i
-    })
+      color: "♠️",
+      mark: i === 1 ? "A" : i,
+    });
     deck.push({
-      color: '♦️',
-      mark: i === 1 ? 'A' : i
-    })
+      color: "♦️",
+      mark: i === 1 ? "A" : i,
+    });
     deck.push({
-      color: '♣️',
-      mark: i === 1 ? 'A' : i
-    })
+      color: "♣️",
+      mark: i === 1 ? "A" : i,
+    });
   }
-  return deck
+  return deck;
 }
 
 function printDeck(deck: Deck) {
-  let result = '\n'
+  let result = "\n";
   deck.forEach((card, index) => {
-    let str = card.color
+    let str = card.color;
     if (card.mark <= 10) {
-      str += card.mark
+      str += card.mark;
     } else if (card.mark === 11) {
-      str += 'J'
+      str += "J";
     } else if (card.mark === 12) {
-      str += 'Q'
+      str += "Q";
     } else if (card.mark === 13) {
-      str += 'K'
+      str += "K";
     } else {
-      str += 'A'
+      str += "A";
     }
-    result += str + '\t'
+    result += str + "\t";
     if ((index + 1) % 4 === 0) {
-      result += '\n'
+      result += "\n";
     }
-  })
-  console.log(result)
+  });
+  console.log(result);
 }
 
-const deck = createdDeck()
-printDeck(deck)
+const deck = createdDeck();
+printDeck(deck);
