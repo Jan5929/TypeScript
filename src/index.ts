@@ -1,8 +1,16 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: sueRimn
+ * @Date: 2020-05-14 16:42:28
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2020-08-17 16:48:36
+ */
 type Color = "♥️" | "♦️" | "♣️" | "♠️";
 type Deck = NormalCard[];
 type NormalCard = {
   color: Color;
-  mark: Number | String;
+  mark: Number | 'A';
 };
 function createdDeck(): Deck {
   const deck: Deck = [];
